@@ -2,9 +2,9 @@
 
 ## running input commandline
 
-$ npm run start
-$ node input-cmd.js
+`npm run start`
+`node input-cmd.js`
 
 ## running spec test
 
-$ npm run test
+`npm run test`
