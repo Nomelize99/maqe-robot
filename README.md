@@ -1,4 +1,10 @@
 ﻿# maqe-robot
 
-## npm run start (node input-cmd.js) for running input commandline
-## npm run test for running spec test
+## running input commandline
+
+$ npm run start
+$ node input-cmd.js
+
+## running spec test
+
+$ npm run test
