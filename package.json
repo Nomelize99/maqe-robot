@@ -1,0 +1,16 @@
+{
+  "name": "maqe-robot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "maqe-robot.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "start": "node input-cmd.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
