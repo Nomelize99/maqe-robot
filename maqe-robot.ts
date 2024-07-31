@@ -1,4 +1,6 @@
-function mappingDirection(direction) {
+import { IMaqeRobot } from "./interfaces/maqe-robot.interface";
+
+function mappingDirection(direction: number): 'North' | 'East' | 'South' | 'West' | undefined {
     switch (direction) {
         case 0:
             return 'North';
@@ -11,10 +13,10 @@ function mappingDirection(direction) {
     }
 }
 
-function maqeRobot(fullCommands) {
-    const commands = fullCommands.match(/(R|L|W\d+)/g);
-    let currentDirection = 0;
-    let position = [ 0, 0 ];
+export function maqeRobot(fullCommands: string): IMaqeRobot {
+    const commands: string[] = fullCommands.match(/(R|L|W\d+)/g)!;
+    let currentDirection: number = 0;
+    const position: number[] = [ 0, 0 ];
     for(const command of commands){
         if(command === 'R'){
             currentDirection = (++currentDirection) % 4;
@@ -23,7 +25,7 @@ function maqeRobot(fullCommands) {
             currentDirection = (--currentDirection + 4) % 4;
         }
         else if(command.startsWith('W')){
-            const step = Number(command.replace('W', ''));
+            const step: number = Number(command.replace('W', ''));
             if(currentDirection === 0){
                 position[1] += step;
             }
@@ -41,7 +43,5 @@ function maqeRobot(fullCommands) {
     return {
         direction: mappingDirection(currentDirection),
         position
-    }
+    };
 }
-
-module.exports = { maqeRobot }

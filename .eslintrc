@@ -1,0 +1,44 @@
+{
+    "env": {
+        "browser": true,
+        "es2017": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules":  {
+        "semi": [2, "always"],
+        "@typescript-eslint/no-var-requires": 0,
+        "@typescript-eslint/prefer-as-const": ["error"],
+        "@typescript-eslint/no-extra-semi": ["error"],
+        "@typescript-eslint/no-unused-vars": ["error"],
+        "@typescript-eslint/no-unsafe-assignment": [0],
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-misused-new": "error",
+        "no-irregular-whitespace": ["error", { "skipTemplates": true }],
+        "no-console": ["warn", { "allow": ["debug", "warn", "error"] }],
+        "@typescript-eslint/typedef": [
+            "error",
+            {
+              "arrowParameter": true,
+              "variableDeclaration": true,
+              "parameter": true,
+              "propertyDeclaration": true,
+              "memberVariableDeclaration": true,
+              "arrayDestructuring": false,
+              "objectDestructuring": false,
+              "variableDeclarationIgnoreFunction": false
+            }
+        ],
+        "@typescript-eslint/no-inferrable-types": "off"
+    }
+  }
