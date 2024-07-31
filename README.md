@@ -3,8 +3,8 @@
 ## running input commandline
 
 `npm run start` or
-`node input-cmd.js`
+`ts-node input-cmd.ts`
 
 ## running spec test
 
-`npm run test`
+`npm run test` or `jest`
